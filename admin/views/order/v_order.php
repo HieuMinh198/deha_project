@@ -32,7 +32,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Đơn Hàng</h5>
                         <div class="table-responsive">
-                            <?php if (isset($_SESSION['alert_delete_order'])) : ?>
+                            <?php if (isset($_SESSION['alert_delete_order'])): ?>
                                 <div class="alert alert-success" role="alert">
                                     <?php echo $_SESSION['alert_delete_order']; ?>
                                 </div>
@@ -62,35 +62,50 @@
                                             $phuong_thuc_thanh_toan = "Chuyển khoản";
                                         }
 
-                                        //$trang_thai0 = $value->trang_thai == 0 ? "selected" : "";
-                                        // $trang_thai1 = $value->trang_thai == 1 ? "selected" : "";
-                                        // $trang_thai2 = $value->trang_thai == 2 ? "selected" : "";
-
-                                        // $trang_thai0n = $value->trang_thai == 0 ? "Chưa thanh toán" : "";
-                                        // $trang_thai1n = $value->trang_thai == 1 ? "Đã thanh toán" : "";
-                                        // $trang_thai2n = $value->trang_thai == 2 ? "Đã thanh toán" : "";
-                                        
                                         if ($value->trang_thai == 0) {
-                                            $trang_thai = "Chưa thanh toán";
-                                        } else {
-                                            $trang_thai = "Đã thanh toán";
+                                            $trang_thai = "Chờ xác nhận";
+                                        } else if ($value->trang_thai == 1) {
+                                            $trang_thai = "Đang giao hàng";
+                                        } else if ($value->trang_thai == 2) {
+                                            $trang_thai = "Giao hàng thành công";
+                                        }else {
+                                            $trang_thai = "Đã hủy";
                                         }
-                                    ?>
+                                        ?>
                                         <tr>
-                                            <td><?php echo $key; ?></td>
-                                            <td><?php echo $value->ma_dh; ?></td>
-                                            <td><?php echo $value->ten_khach_hang; ?></td>
-                                            <td><?php echo $value->tong_tien; ?></td>
-                                            <td><?php echo $phuong_thuc_thanh_toan; ?></td>
+                                            <td>
+                                                <?php echo $key; ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $value->ma_dh; ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $value->ten_khach_hang; ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $value->tong_tien; ?>
+                                            </td>
+                                            <td>
+                                                <?php echo $phuong_thuc_thanh_toan; ?>
+                                            </td>
                                             <td>
                                                 <?php echo $trang_thai; ?>
                                             </td>
                                             <td>
-                                                <form action="c_order.php" method="POST">
-                                                    <button type="button" class="btn btn-success btn-sm" onclick="window.location.href='order_details.php?ma_dh=<?php echo $value->ma_dh; ?>'">Chi tiết</button>
+                                                <form action="update_order.php" method="POST">
+                                                    <button type="button" class="btn btn-success btn-sm"
+                                                        onclick="window.location.href='order_details.php?ma_dh=<?php echo $value->ma_dh; ?>'">Chi
+                                                        tiết</button>
                                                     <input type="hidden" name="trang_thai" value="1">
                                                     <input type="hidden" name="ma_dh" value="<?php echo $value->ma_dh; ?>">
-                                                    <button type="submit" class="btn btn-danger btn-sm" name="btn_confirm">Xác nhận</button>
+                                                    <?php
+                                                    if ($value->trang_thai == 0) {
+                                                        ?>
+                                                        <button type="submit" class="btn btn-danger btn-sm"
+                                                            name="btn_confirm">Xác nhận</button>
+                                                        <?php
+                                                    }
+                                                    ?>
                                                 </form>
 
                                             </td>

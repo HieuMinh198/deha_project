@@ -138,7 +138,11 @@ p:last-child {
     font-family: var(--headingFontFamily)
 }
 
-.default-btn::before {
+.default-btn:hover {
+    color: #000 !important;
+}
+
+/* .default-btn::before {
     top: 0;
     left: 0;
     height: 0;
@@ -162,13 +166,13 @@ p:last-child {
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     background-color: var(--blackColor)
-}
+} */
 
 .default-btn span {
     display: block
 }
 
-.default-btn span::before {
+/* .default-btn span::before {
     bottom: 0;
     height: 0;
     left: 25%;
@@ -192,9 +196,9 @@ p:last-child {
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     background-color: var(--blackColor)
-}
+} */
 
-.default-btn:hover {
+/* .default-btn:hover {
     color: var(--whiteColor);
     background-color: var(--primaryColor)
 }
@@ -207,7 +211,7 @@ p:last-child {
 .default-btn:hover span::before,
 .default-btn:hover span::after {
     height: 100%
-}
+} */
 
 .form-control {
     height: 48px;
@@ -343,10 +347,10 @@ textarea.form-control {
     background-color: var(--whiteColor)
 }
 
-.banner-content .content .default-btn:hover {
+/* .banner-content .content .default-btn:hover {
     color: var(--blackColor);
     background-color: var(--blackColor)
-}
+} */
 
 .banner-image a {
     margin-bottom: 25px;
@@ -4547,6 +4551,10 @@ blockquote cite,
 
 .wishlist-table table tbody tr td.product-stock-status span.out-stock {
     color: #ffb453
+}
+
+.wishlist-table table tbody tr td.product-stock-status span.del-stock {
+    color: rgb(194, 39, 39)
 }
 
 .go-top {

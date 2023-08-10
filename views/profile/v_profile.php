@@ -10,7 +10,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Tên <span class="required">*</span></label>
-                                    <input type="text" name="name" value="<?php if($profile){echo $profile->ten_khach_hang;}else{echo " ";} ?>" class="form-control" required>
+                                    <input type="text" name="name" value="<?php if($profile){echo $profile->ten_khach_hang;}else{echo " ";} ?>" class="form-control" required placeholder="Nhập họ và tên">
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
@@ -22,7 +22,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Địa chỉ <span class="required">*</span></label>
-                                    <input type="text" name="address" class="form-control" value="<?php if($profile){echo $profile->dia_chi;}else{echo " ";} ?>" placeholder="Apartment, suite, unit, etc. (optional)" required>
+                                    <input type="text" name="address" class="form-control" value="<?php if($profile){echo $profile->dia_chi;}else{echo " ";} ?>" placeholder="Nhập địa chỉ chi tiết" required>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
@@ -56,7 +56,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Số điện thoại <span class="required">*</span></label>
-                                    <input type="text" name="phone" value="<?php if($profile){echo $profile->so_dien_thoai;}else{echo " ";} ?>" class="form-control" required>
+                                    <input type="text" name="phone" value="<?php if($profile){echo $profile->so_dien_thoai;}else{echo " ";} ?>" class="form-control" placeholder="Nhập số điện thoại" required>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">

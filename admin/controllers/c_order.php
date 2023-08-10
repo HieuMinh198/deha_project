@@ -45,8 +45,8 @@ class c_order
 
     public function update_status()
     {
-        if (isset($_GET['ma_dh'])) {
-            $ma_dh = $_GET['ma_dh'];
+        if (isset($_POST['ma_dh'])) {
+            $ma_dh = $_POST['ma_dh'];
             $m_order = new m_order();
             $status = $m_order->select_status($ma_dh);
     
@@ -57,7 +57,7 @@ class c_order
                     $trang_thai = $_POST['trang_thai'];
                 } else {
                     // Nếu không tồn tại, gán giá trị mặc định là 1
-                    $trang_thai = 1;
+                    $trang_thai = 0;
                 }
     
                 // Thực hiện cập nhật trạng thái đơn hàng
@@ -74,10 +74,11 @@ class c_order
             }
         } else {
             echo "Không có mã đơn hàng được truyền vào.";
+            echo "<script> window.location.href='order.php'</script>";
         }
     
-        $view = "views/order/v_update_status_order.php";
-        include_once "templates/layout.php";
+        // $view = "views/order/v_order.php";
+        // include_once "templates/layout.php";
     }
     
     

@@ -48,5 +48,18 @@ class m_checkout extends database {
         $this->setQuery($sql);
         return $this->execute(array( $ten_khach_hang, $ngay_sinh, $dia_chi, $so_dien_thoai, $email,$id));
     }
+
+     // lấy trạng thái theo  đơn hàng
+     public function select_status($ma_dh) {
+        $sql = "select trang_thai from don_hang where ma_dh = ?";
+        $this->setQuery($sql);
+        return $this->loadRow(array($ma_dh));
+    }
+    // cập nhật trạng thái đơn hàng
+    public function update_status_order($ma_dh, $trang_thai) {
+        $sql = "UPDATE don_hang SET trang_thai = ? WHERE ma_dh = ?";
+        $this->setQuery($sql);
+        return $this->execute(array($trang_thai, $ma_dh));
+    }
 }
 ?>

@@ -23,10 +23,10 @@ session_start();
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6">
                     <ul>
-                        <li><a href="https://www.facebook.com/kirito.lusy.3/" target="_blank"><i class='bx bxl-facebook'></i></a></li>
-                        <li><a href="https://twitter.com/HoLngVn1" target="_blank"><i class='bx bxl-twitter'></i></a></li>
-                        <li><a href="https://www.instagram.com/hoacatmoi/" target="_blank"><i class='bx bxl-instagram'></i></a></li>
-                        <li><a href="https://www.youtube.com/channel/UCLpdXrtl1sPL0QxjDvGqDyA" target="_blank"><i class='bx bxl-youtube'></i></a></li>
+                        <li><a href="#" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                        <li><a href="#" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                        <li><a href="#" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                        <li><a href="#" target="_blank"><i class='bx bxl-youtube'></i></a></li>
                     </ul>
                 </div>
             </div>

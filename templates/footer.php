@@ -7,9 +7,9 @@
                         <img src="public/patoi/assets/img/white-logo.png" alt="logo">
                     </a>
                     <ul class="footer-contact-info">
-                        <li><span>Hotline:</span> <a href="tel:(+84) 357143496">0962298198</a></li>
-                        <li><span>Hỗ trợ kỹ thuật:</span> <a href="tel:(+84) 357143496">0962298198</a></li>
-                        <li><span>Email:</span> <a href="mailto:luonghoa1210@gmail.com">shoppethm@gmail.com</span></a></li>
+                        <li><span>Hotline:</span> <a href="tel:(+84) 962298198">0962298198</a></li>
+                        <li><span>Hỗ trợ kỹ thuật:</span> <a href="tel:(+84) 962298198">0962298198</a></li>
+                        <li><span>Email:</span> <a href="mailto:shoppethm@gmail.com">shoppethm@gmail.com</span></a></li>
                         <li><span>Địa Chỉ:</span> 1A Vinaconex 7 136 Hồ Tùng Mậu, Phú Diễn, Bắc Từ Liêm, Hà Nội</li>
                         <li><span>Thời gian làm việc:</span> Monday - Friday 8:00am - 16:00pm</li>
                     </ul>

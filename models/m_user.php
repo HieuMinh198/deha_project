@@ -47,7 +47,7 @@ class m_user extends database {
 
     //   tạo id khach voi email khi dnag nhap
     public function add_information_user($id, $email ) {
-        $sql = "INSERT INTO khach_hang VALUES (?,'','','','',?,'')";
+        $sql = "INSERT INTO khach_hang VALUES (?,'','','','','',?)";
         $this->setQuery($sql);
         return $this->execute(array( $id,  $email));
     }
