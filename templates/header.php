@@ -39,7 +39,7 @@ session_start();
             <div class="container">
                 <div class="patoi-responsive-menu">
                     <div class="logo">
-                        <a href="home.php"><img src="public/patoi/assets/img/logo.png" alt="logo"></a>
+                        <a href="index.php"><img src="public/patoi/assets/img/logo.png" alt="logo"></a>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@ session_start();
         <div class="patoi-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="home.php"><img src="public/patoi/assets/img/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="index.php"><img src="public/patoi/assets/img/logo.png" alt="logo"></a>
                     <div class="collapse navbar-collapse mean-menu">
                         <ul class="navbar-nav">
                             <li class="nav-item"><a href="index.php?index" class=" nav-link <?php echo isset($_GET['index']) ? "active" : " "; ?>">TRANG CHỦ</a>

@@ -3,7 +3,7 @@ require_once ("database.php");
 class m_product extends database {
     // lấy thông tin sp trên database
     public function read_product() {
-        $sql = "select * from san_pham order by ma_sp desc";
+        $sql = "select * from san_pham";
         $this->setQuery($sql);
         return $this->loadAllRows();
     }
@@ -11,7 +11,7 @@ class m_product extends database {
 
     // phân trang
     public  function read_product_by_page($item_per_page,$offset) {
-        $sql = "SELECT * FROM san_pham LIMIT $item_per_page OFFSET $offset ";
+        $sql = "SELECT * FROM san_pham order by ma_sp DESC LIMIT $item_per_page OFFSET $offset";
         $this->setQuery($sql);
         return $this->loadAllRows();
     }

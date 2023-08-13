@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 @session_start();
 include_once ("models/m_user.php");
 class c_user {
@@ -28,7 +31,7 @@ class c_user {
     public function saveLoginSession($username,$password) {
         $m_user = new m_user();
         $user = $m_user->read_user_by_id_pass($username, $password);
-        if (!empty($user)) {
+        if (!empty($user) && $user->type == 0) {
             $_SESSION['login_admin'] = $user;
         }
     }
